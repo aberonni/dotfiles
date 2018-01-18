@@ -1,0 +1,10 @@
+[
+    {
+        "key": "cmd+[Semicolon]",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "alt+tab",
+        "command": "workbench.action.terminal.focusNext"
+    }
+]

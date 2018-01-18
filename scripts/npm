@@ -9,5 +9,5 @@ function install_npm_packages(){
 
 function backup_npm_packages(){
   run "backup npm packages"
-  npm ls -g --depth=0 --json=true | jq -r '.dependencies | keys[]' > $NPM_PACKAGES
+  npm ls -g --depth=0 --json=true | jq -r '.dependencies | with_entries( select(.value | has("from")) ) | keys[]' > $NPM_PACKAGES
 }

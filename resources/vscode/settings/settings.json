@@ -1,0 +1,38 @@
+{
+    "window.zoomLevel": 0,
+    "git.confirmSync": false,
+    "workbench.colorTheme": "Dark++",
+    "workbench.colorCustomizations": {
+        "activityBarBadge.background": "#3F9E4D",
+        "statusBar.background": "#3F9E4D",
+        "focusBorder": "#3F9E4D"
+    },
+    "git.enableSmartCommit": true,
+    "editor.formatOnPaste": true,
+    "terminal.integrated.scrollback": 10000,
+    "files.insertFinalNewline": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.showTabs": true,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "sync.gist": "59652c8f38ea7db2b09500eb0c7ba920",
+    "sync.lastUpload": "2018-01-10T10:43:56.345Z",
+    "sync.autoDownload": false,
+    "sync.autoUpload": true,
+    "sync.lastDownload": "",
+    "sync.forceDownload": false,
+    "sync.anonymousGist": false,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false
+}
