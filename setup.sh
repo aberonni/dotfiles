@@ -166,16 +166,16 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 check_requirements
 
-source ./scripts/apps
-source ./scripts/dotfiles
-source ./scripts/fonts
-source ./scripts/github
-source ./scripts/npm
-source ./scripts/osx
-source ./scripts/squid
-source ./scripts/vscode
-source ./scripts/xcode
-source ./scripts/zsh
+source ./scripts/apps.sh
+source ./scripts/dotfiles.sh
+source ./scripts/fonts.sh
+source ./scripts/github.sh
+source ./scripts/npm.sh
+source ./scripts/osx.sh
+source ./scripts/squid.sh
+source ./scripts/vscode.sh
+source ./scripts/xcode.sh
+source ./scripts/zsh.sh
 
 if [[ $1 =~ (-b| --backup) ]]; then
   backup_system
