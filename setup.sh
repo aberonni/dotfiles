@@ -111,6 +111,9 @@ function install_system(){
     message "set osx preferences"
     set_osx_preferences
 
+    message "set github ssh key"
+    set_github_ssh_key
+
     echo ""
     echo ""
     echo "#############################################################################################"
@@ -166,6 +169,7 @@ check_requirements
 source ./scripts/apps
 source ./scripts/dotfiles
 source ./scripts/fonts
+source ./scripts/github
 source ./scripts/npm
 source ./scripts/osx
 source ./scripts/squid

@@ -23,6 +23,15 @@ function error(){
     echo -e "${COL_RED}[ERROR] - ${COL_RESET} "$1
 }
 
+function ask(){
+    echo -e "${COL_YELLOW} ${COL_RESET}  [?]"$1
+    read -r
+}
+
+function get_answer(){
+    printf "%s" "$REPLY"
+}
+
 # Test whether a command exists
 # $1 - cmd to test
 function command_exists(){
