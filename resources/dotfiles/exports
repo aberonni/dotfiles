@@ -1,0 +1,27 @@
+# Don’t clear the screen after quitting a manual page.
+export MANPAGER='less -X';
+
+export MAVEN_OPTS="-Xmx2048m"
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Use gnu-bins installed with brew instead of OSX defaults
+DIRS=(`brew --prefix`/opt/*/libexec/gnubin)
+for dir in "${DIRS[@]}"
+do
+  PATH=$dir:$PATH
+done
+export PATH="$PATH:/usr/local/sbin"
+
+# Add man pages for gnu-bins
+MANS=(`brew --prefix`/opt/*/libexec/gnuman)
+for man in "${MANS[@]}"
+do
+  MANPATH=$man:$MANPATH
+done
+export MANPATH="/usr/local/man:$MANPATH"
+
+export TERM="xterm-256color"
+
+export HISTORY_IGNORE="(history|ls|l|la|ll|lla|lsa|cd|cd *|pwd|exit|* --help|man *|cls|clear)"
+
+export EDITOR=/usr/local/bin/nano
