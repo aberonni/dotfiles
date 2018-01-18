@@ -75,11 +75,6 @@ function check_requirements(){
 
 
 function install_system(){
-     message "check xcode installation"
-    if xcode-select --install > /dev/null ; then
-        echo "Installing xcode"
-        read -p "Press ENTER when installation is completed to continue " -n 1
-    fi
     
     echo ""
     echo ""
@@ -88,6 +83,9 @@ function install_system(){
     echo "###########################"
     echo ""
     echo ""
+
+    message "install xcode"
+    install_xcode
 
     message "install apps"
     install_apps
@@ -172,6 +170,7 @@ source ./scripts/npm
 source ./scripts/osx
 source ./scripts/squid
 source ./scripts/vscode
+source ./scripts/xcode
 source ./scripts/zsh
 
 if [[ $1 =~ (-b| --backup) ]]; then
