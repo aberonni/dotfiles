@@ -173,6 +173,9 @@ function set_osx_preferences(){
 	run "prevent Time Machine from Prompting to Use New Hard Drives as Backup Volume"
 	defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
+	run "show hidden files"
+	defaults write com.apple.finder AppleShowAllFiles YES
+
 	run "disable Local Time Machine Backups"
 	hash tmutil &> /dev/null && sudo tmutil disablelocal
 

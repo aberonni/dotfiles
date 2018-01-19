@@ -206,6 +206,7 @@ source ./scripts/fonts.sh
 source ./scripts/github.sh
 source ./scripts/npm.sh
 source ./scripts/osx.sh
+source ./scripts/pip.sh
 source ./scripts/squid.sh
 source ./scripts/vscode.sh
 source ./scripts/xcode.sh
