@@ -3,6 +3,9 @@
 NPM_PACKAGES="${RESOURCES_DIRECTORY}/npm/npm_packages"
 
 function install_npm_packages(){
+  run "install node"
+  brew install node
+
   run "install npm packages"
   cat ${NPM_PACKAGES} | xargs npm install --global --quiet
 }
