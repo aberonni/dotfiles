@@ -116,6 +116,10 @@ function install_system(){
     echo ""
     echo ""
 
+    # This must be first step
+    message "setup ZSH"
+    set_zsh_shell
+
     message "install xcode"
     install_xcode
 
@@ -124,9 +128,6 @@ function install_system(){
 
     message "install npm packages"
     install_npm_packages
-
-    message "setup ZSH"
-    set_zsh_shell
 
     message "setup vscode"
     setup_vscode
