@@ -33,8 +33,12 @@ if ! zgen saved; then
   	zgen save
 fi
 
-source ~/.exports
-source ~/.functions
+# Load the shell dotfiles, and then some:
+for file in ~/.{aliases,exports,functions,git-prompt}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
 
 autoload -Uz compinit
 compinit
