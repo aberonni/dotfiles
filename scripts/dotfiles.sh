@@ -1,8 +1,8 @@
 #!/bin/bash
 
 CONFIG_FILES="aliases exports functions gitconfig gitignore nanorc zshrc"
-CONFIG_FILES_BACKUP_FOLDER="${HOME}/dotfiles_backup/"
-CONFIG_FILES_DIR="${RESOURCES_DIRECTORY}/dotfiles/"
+CONFIG_FILES_BACKUP_FOLDER="${HOME}/dotfiles_backup"
+CONFIG_FILES_DIR="${RESOURCES_DIRECTORY}/dotfiles"
 
 function backup_old_dotfiles(){
     bckfld="${CONFIG_FILES_BACKUP_FOLDER}/$(date +%s)"
