@@ -185,6 +185,9 @@ function backup_system(){
     message "backup fonts"
     backup_fonts
 
+    message "backup pip"
+    backup_pip_packages
+
     echo ""
     echo ""
     echo "########################"
