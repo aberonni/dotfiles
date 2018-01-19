@@ -182,14 +182,4 @@ function set_osx_preferences(){
 	run "VSCode Insiders as default text editor"
 	defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
 		'{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.microsoft.VSCodeInsiders;LSHandlerPreferredVersions={LSHandlerRoleAll=-;};}'
-
-	echo
-	echo
-	read -r -p  "Do you want to wipe all dock icons?   [y|N] " response
-	if [[ $response =~ (yes|y|Y) ]]; then
-	  run "wiping"
-	  defaults write com.apple.dock persistent-apps -array
-	else
-	  message "skip wiping dock icons"
-	fi
 }
