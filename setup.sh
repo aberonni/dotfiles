@@ -116,15 +116,20 @@ function install_system(){
     echo ""
     echo ""
 
-    # This must be first step
+    message "install brew apps"
+    install_apps
+
+    message "install pip packages"
+    install_pip_packages
+
+    message "copy dotfiles"
+    setup_dotfiles
+
     message "setup ZSH"
     set_zsh_shell
 
     message "install xcode"
     install_xcode
-
-    message "install apps"
-    install_apps
 
     message "install npm packages"
     install_npm_packages
@@ -134,9 +139,6 @@ function install_system(){
 
     message "install fonts"
     install_fonts
-
-    message "copy dotfiles"
-    setup_dotfiles
 
     message "Setup squid conf"
     setup_squid

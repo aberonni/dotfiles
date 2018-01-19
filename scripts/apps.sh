@@ -22,7 +22,7 @@ function cleanup_brew(){
 }
 
 function backup_brew_packages(){
-  brew list > ${BREW_PACKAGES}
+  brew leaves > ${BREW_PACKAGES}
 }
 
 function backup_brew_cask_packages(){
