@@ -42,7 +42,7 @@ function setup_vscode(){
   brew cask install visual-studio-code-insiders
 
   run "creating settings directory"
-  create_vscode_dir ${VSCODE_SUPPORT_DIR}
+  create_vscode_dir "${VSCODE_SUPPORT_DIR}"
 
   run "copy settings"
   copy_vscode_settings
