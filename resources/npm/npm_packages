@@ -13,5 +13,6 @@ node-gyp
 npm-check
 npm-link-check
 rebase-editor
+vsce
 webpack-bundle-size-analyzer
 weinre

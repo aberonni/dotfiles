@@ -6,5 +6,9 @@
     {
         "key": "alt+tab",
         "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "key": "shift+cmd+j",
+        "command": "_webview.openDevTools"
     }
 ]
