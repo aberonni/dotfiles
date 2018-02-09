@@ -1,27 +1,23 @@
 {
-    "window.zoomLevel": 0,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.find.globalFindClipboard": true,
+    "editor.formatOnPaste": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.insertFinalNewline": true,
     "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.promptToSaveFilesBeforeCommit": true,
+    "search.globalFindClipboard": true,
+    "search.smartCase": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.scrollback": 10000,
+    "window.zoomLevel": 0,
     "workbench.colorTheme": "Dark++",
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#3F9E4D",
         "statusBar.background": "#3F9E4D",
         "focusBorder": "#3F9E4D"
     },
-    "git.enableSmartCommit": true,
-    "editor.formatOnPaste": true,
-    "terminal.integrated.scrollback": 10000,
-    "files.insertFinalNewline": true,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "workbench.editor.showTabs": true,
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressUpdateNotice": false,
-        "suppressWelcomeNotice": true
-    }
+    "workbench.fontAliasing": "auto",
 }
