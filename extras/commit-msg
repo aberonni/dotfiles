@@ -1,0 +1,11 @@
+#!/bin/sh
+
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+issue_code=$(echo "${current_branch}" | sed -E "s/(VR-[0-9]+)(-.*)/\1/g")
+
+if [ "${current_branch}" != "${issue_code}" ]; then
+    prefix=$(echo "[${issue_code}]" | tr "[:lower:]" "[:upper:]")
+    original_message=$(cat $1)
+    message="${prefix} ${original_message}"
+    echo "${message}" > $1
+fi

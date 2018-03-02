@@ -1,0 +1,5 @@
+git bisect start
+git bisect good REF
+git bisect bad REF
+git bisect run grep "closeSession: 'afterFeature'" lib/index.js
+git bisect reset
