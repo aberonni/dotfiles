@@ -11,6 +11,8 @@ bibhasdn.django-html
 christian-kohler.npm-intellisense
 dbaeumer.vscode-eslint
 eg2.tslint
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
 ms-python.python
 msjsdiag.debugger-for-chrome
 pflannery.vscode-versionlens
