@@ -22,9 +22,13 @@ if ! zgen saved; then
 	zgen oh-my-zsh plugins/mvn
 	zgen oh-my-zsh plugins/npm
 	zgen oh-my-zsh plugins/yarn
+	
+	zgen oh-my-zsh themes/ys
 
 	zgen load zsh-users/zsh-completions src
 	zgen load caarlos0/zsh-open-pr
+
+	ZSH_THEME=ys
 
 	# this must be the last loaded
 	zgen load zsh-users/zsh-syntax-highlighting

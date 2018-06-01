@@ -3,10 +3,11 @@ alias la='ls -A'
 alias ll='ls -lh'
 alias lla='ls -lhA'
 alias rm='trash'
-alias gi='git'
-alias cls='printf "\033c"';
-alias clear='cls';
+alias cls='printf "\033c"'
+alias clear='cls'
 alias mvn='mvn-color'
+
+alias code='code-insiders'
 
 alias server='python -m SimpleHTTPServer'
 

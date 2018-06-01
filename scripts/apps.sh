@@ -33,9 +33,6 @@ function install_apps(){
 
   run "tap repositories"
   tap_brew_repositories
-  
-  run "install java"
-  brew cask install java
 
   run "install brew packages"
   install_brew_packages
