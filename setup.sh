@@ -122,6 +122,9 @@ function install_system(){
     message "install pip packages"
     install_pip_packages
 
+    message "install pip packages"
+    install_nvm
+
     message "copy dotfiles"
     setup_dotfiles
 
@@ -210,6 +213,7 @@ source ./scripts/dotfiles.sh
 source ./scripts/fonts.sh
 source ./scripts/github.sh
 source ./scripts/npm.sh
+source ./scripts/nvm.sh
 source ./scripts/osx.sh
 source ./scripts/pip.sh
 source ./scripts/squid.sh
