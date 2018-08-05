@@ -10,5 +10,13 @@
     {
         "key": "shift+cmd+j",
         "command": "_webview.openDevTools"
+    },
+    {
+        "key": "cmd+ctrl+down",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "cmd+ctrl+up",
+        "command": "workbench.action.focusActiveEditorGroup"
     }
 ]
