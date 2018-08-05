@@ -9,8 +9,6 @@ alias mvn='mvn-color'
 
 alias code='code-insiders'
 
-alias server='python -m SimpleHTTPServer'
-
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -21,8 +19,6 @@ alias ag='ag -f --hidden'
 alias sudo='sudo '
 
 alias flush_dns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;'
-
-alias update_host_no_ads='python ~/git/hosts/updateHostsFile.py -e gambling porn fakenews && cp ~/git/hosts/hosts ~/Documents/hosts/NO_ADS'
 
 alias update_osx='printf "check apple update\n"; sudo softwareupdate --verbose -i -a;'
 

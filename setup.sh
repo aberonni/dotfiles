@@ -119,10 +119,7 @@ function install_system(){
     message "install brew apps"
     install_apps
 
-    message "install pip packages"
-    install_pip_packages
-
-    message "install pip packages"
+    message "install nvm"
     install_nvm
 
     message "copy dotfiles"
@@ -188,9 +185,6 @@ function backup_system(){
     message "backup fonts"
     backup_fonts
 
-    message "backup pip"
-    backup_pip_packages
-
     echo ""
     echo ""
     echo "########################"
@@ -215,7 +209,6 @@ source ./scripts/github.sh
 source ./scripts/npm.sh
 source ./scripts/nvm.sh
 source ./scripts/osx.sh
-source ./scripts/pip.sh
 source ./scripts/squid.sh
 source ./scripts/vscode.sh
 source ./scripts/xcode.sh
