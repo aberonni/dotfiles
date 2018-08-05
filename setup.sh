@@ -4,6 +4,7 @@ DOTFILES_DIRECTORY="${HOME}/git/dotfiles"
 RESOURCES_DIRECTORY="${DOTFILES_DIRECTORY}/resources"
 DOTFILES_TARBALL_PATH="https://github.com/aberonni/dotfiles/tarball/master"
 DOTFILES_GIT_REMOTE="https://github.com/aberonni/dotfiles.git"
+DOTFILES_GIT_REMOTE_SSH="git@github.com:aberonni/dotfiles.git"
 
 ESC_SEQ="\x1b["
 COL_RESET=${ESC_SEQ}"39;49;00m"
@@ -148,6 +149,8 @@ function install_system(){
 
     message "set github ssh key"
     set_github_ssh_key
+
+    git remote set-url origin ${DOTFILES_GIT_REMOTE_SSH}
 
     echo ""
     echo ""
