@@ -4,6 +4,11 @@ export MANPAGER='less -X';
 export MAVEN_OPTS="-Xmx2048m"
 export JAVA_HOME=$(/usr/libexec/java_home)
 
+# Add bin path
+if [ -d "$HOME/bin" ] ; then
+  PATH="$PATH:$HOME/bin"
+fi
+
 # Use gnu-bins installed with brew instead of OSX defaults
 DIRS=(`brew --prefix`/opt/*/libexec/gnubin)
 for dir in "${DIRS[@]}"
