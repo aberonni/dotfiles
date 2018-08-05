@@ -1,18 +1,14 @@
-@angular/cli
-@google-cloud/functions-emulator
 babel
 babel-cli
 bower
 cordova
 corsproxy
-create-react-native-app
 cssunminifier
-depcheck
+git-open
 gulp-cli
 http-server
-ionic
 json-server
-mongodb-runner
+ndb
 node-gyp
 npm-check
 npm-link-check
@@ -21,3 +17,4 @@ rebase-editor
 vsce
 webpack-bundle-size-analyzer
 weinre
+yo
