@@ -16,11 +16,6 @@ function install_brew_cask_packages(){
 	cat ${BREW_CASK_PACKAGES} | xargs brew cask install
 }
 
-function cleanup_brew(){
-  brew cleanup
-  brew cask cleanup
-}
-
 function backup_brew_packages(){
   brew leaves > ${BREW_PACKAGES}
 }
@@ -39,9 +34,6 @@ function install_apps(){
 
   run "install brew cask packages"
   install_brew_cask_packages
-
-  run "cleanup brew"
-  cleanup_brew
 }
 
 function backup_apps(){

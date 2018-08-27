@@ -30,7 +30,7 @@ alias update_zsh='printf "update zgen\n"; zgen selfupdate; printf "update zgen p
 
 alias update='update_osx; update_brew; update_npm; update_zsh;'
 
-alias backup='bash ~/git/dotfiles-for-work/setup.sh -b'
+alias backup='bash ~/git/dotfiles/setup.sh -b'
 
 # OS X has no `md5sum`, so use `md5` as a fallback
 command -v md5sum > /dev/null || alias md5sum="md5"
