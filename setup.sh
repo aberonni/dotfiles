@@ -129,6 +129,9 @@ function install_system(){
     message "setup ZSH"
     set_zsh_shell
 
+    message "setup fzf"
+    $(brew --prefix)/opt/fzf/install
+
     message "install xcode"
     install_xcode
 
@@ -198,10 +201,6 @@ function backup_system(){
 
 }
 
-sudo -v
-# Keep-alive: update existing sudo time stamp until the script has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 check_requirements
 
 source ./utils.sh
@@ -220,6 +219,10 @@ source ./scripts/zsh.sh
 if [[ $1 =~ (-b| --backup) ]]; then
   backup_system
 else
+  sudo -v
+  # Keep-alive: update existing sudo time stamp until the script has finished
+  while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
   install_system
 fi
 

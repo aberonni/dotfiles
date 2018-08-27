@@ -4,6 +4,7 @@ coreutils
 diff-so-fancy
 findutils
 fswatch
+fzf
 git
 git-lfs
 grep
