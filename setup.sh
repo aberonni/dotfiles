@@ -119,6 +119,9 @@ function install_system(){
 
     message "install brew apps"
     install_apps
+    
+    message "setup mongodb"
+    setup_mongodb
 
     message "install nvm"
     install_nvm
@@ -213,6 +216,7 @@ source ./scripts/nvm.sh
 source ./scripts/osx.sh
 source ./scripts/squid.sh
 source ./scripts/vscode.sh
+source ./scripts/mongodb.sh
 source ./scripts/xcode.sh
 source ./scripts/zsh.sh
 

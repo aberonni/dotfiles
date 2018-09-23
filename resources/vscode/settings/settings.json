@@ -4,8 +4,8 @@
     "bracketPairColorizer.showHorizontalScopeLine": false,
     "diffEditor.ignoreTrimWhitespace": true,
     "editor.formatOnPaste": true,
-    "editor.formatOnSave": false,
-    "eslint.autoFixOnSave": false,
+    "editor.formatOnType": true,
+    "eslint.autoFixOnSave": true,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "files.insertFinalNewline": true,
@@ -31,4 +31,5 @@
     "workbench.startupEditor": "welcomePage",
     "git.autofetch": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "prettier.eslintIntegration": true,
 }

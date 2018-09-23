@@ -1,5 +1,6 @@
 bash-completion
 boost
+carthage
 coreutils
 diff-so-fancy
 findutils
@@ -13,6 +14,7 @@ htop
 jq
 libev
 libyaml
+mongodb
 moreutils
 nano
 pre-commit

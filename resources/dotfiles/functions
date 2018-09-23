@@ -40,3 +40,7 @@ compdef _pr pr
 gzip_size () {
 	gzip -c $1 | wc -c
 }
+
+show-port() { lsof -i :$1; }
+free-port() { kill "$(lsof -t -i :$1)"; }
+kill-port() { kill -kill "$(lsof -t -i :$1)"; }

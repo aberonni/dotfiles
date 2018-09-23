@@ -10,11 +10,13 @@ DryWolf.dark-plus-plus-theme
 EditorConfig.EditorConfig
 eg2.tslint
 esbenp.prettier-vscode
+HookyQR.JSDocTagComplete
 mohsen1.prettify-json
 ms-python.python
 msjsdiag.debugger-for-chrome
 PeterJausovec.vscode-docker
 pflannery.vscode-versionlens
 stevejpurves.cucumber
+stevencl.addDocComments
 tht13.python
 whtouche.vscode-js-console-utils
