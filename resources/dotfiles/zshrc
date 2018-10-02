@@ -39,6 +39,8 @@ for file in ~/.{aliases,exports,functions,git-prompt}; do
 done;
 unset file;
 
+# spaceship theme customization
+SPACESHIP_TIME_SHOW=true
 
 autoload -Uz compinit
 compinit

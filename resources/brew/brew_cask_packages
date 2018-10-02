@@ -5,9 +5,10 @@ clipy
 docker
 filezilla
 firefox
+font-fira-code
 gimp
-google-chrome
 java
+lastpass
 qlcolorcode
 qlimagesize
 qlmarkdown
@@ -15,10 +16,11 @@ qlprettypatch
 qlstephen
 quicklook-csv
 quicklook-json
+react-native-debugger
 slack
 sourcetree
 spectacle
 spotify
+sublime-text
 visual-studio-code-insiders
-vlc
 webpquicklook

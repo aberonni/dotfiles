@@ -34,6 +34,10 @@ function install_apps(){
 
   run "install brew cask packages"
   install_brew_cask_packages
+
+  run "install iterm2 color scheme"
+  brew cask install iterm2
+  open "${RESOURCES_DIRECTORY}/iterm/one-dark.itermcolors"
 }
 
 function backup_apps(){
