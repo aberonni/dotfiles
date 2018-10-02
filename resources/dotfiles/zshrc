@@ -23,8 +23,8 @@ if ! zgen saved; then
 
 	zgen load zsh-users/zsh-completions src
 	zgen load caarlos0/zsh-open-pr
-	
-	zgen load ~/git/dotfiles/extras/ys.zsh-theme
+
+	zgen load denysdovhan/spaceship-prompt spaceship
 
 	# this must be the last loaded
 	zgen load zsh-users/zsh-syntax-highlighting
