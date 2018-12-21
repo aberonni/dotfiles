@@ -12,7 +12,6 @@ if ! zgen saved; then
 	zgen oh-my-zsh lib/completion.zsh
 	zgen oh-my-zsh lib/git.zsh
 	zgen oh-my-zsh lib/history.zsh
-	zgen oh-my-zsh lib/nvm.zsh
 	zgen oh-my-zsh lib/spectrum.zsh
 	zgen oh-my-zsh lib/theme-and-appearance.zsh
 
@@ -42,6 +41,41 @@ unset file;
 # spaceship theme customization
 SPACESHIP_TIME_SHOW=true
 
+SPACESHIP_PROMPT_ORDER=(
+	time
+	user
+	dir
+	host
+	git
+	# hg
+	package
+	node
+	# ruby
+	# elixir
+	# xcode
+	# swift
+	# golang
+	# php
+	# rust
+	# haskell
+	# julia
+	docker
+	# aws
+	venv
+	# conda
+	# pyenv
+	# dotnet
+	# ember
+	kubecontext
+	exec_time
+	line_sep
+	battery
+	# vi_mode
+	# jobs
+	exit_code
+	char
+)
+
 autoload -Uz compinit
 compinit
 
@@ -50,9 +84,5 @@ eval "$(dircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=31=33'
 zstyle ':completion:*' special-dirs true
-
-# This loads nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

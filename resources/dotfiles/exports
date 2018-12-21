@@ -29,6 +29,7 @@ export TERM="xterm-256color"
 
 export HISTORY_IGNORE="(history|ls|l|la|ll|lla|lsa|cd|cd *|pwd|exit|* --help|man *|cls|clear)"
 
-export EDITOR=/usr/local/bin/nano
+export EDITOR=/usr/local/bin/code-insiders
 
+export NVM_DIR="$HOME/.nvm"
 export FZF_COMPLETION_TRIGGER='\\'
