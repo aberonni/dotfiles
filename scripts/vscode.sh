@@ -1,10 +1,9 @@
 #!/bin/bash
-
 VSCODE_BACKUP_FOLDER="${RESOURCES_DIRECTORY}/vscode/backup"
 
-VSCODE_SUPPORT_DIR="${HOME}/Library/Application Support/Code - Insiders/User"
-VSCODE_SUPPORT_SETTINGS="${HOME}/Library/Application Support/Code - Insiders/User/settings.json"
-VSCODE_SUPPORT_KEYBINDINGS="${HOME}/Library/Application Support/Code - Insiders/User/keybindings.json"
+VSCODE_SUPPORT_DIR="${HOME}/Library/Application Support/Code/User"
+VSCODE_SUPPORT_SETTINGS="${HOME}/Library/Application Support/Code/User/settings.json"
+VSCODE_SUPPORT_KEYBINDINGS="${HOME}/Library/Application Support/Code/User/keybindings.json"
 
 VSCODE_RESOURCES_EXTENSIONS="${RESOURCES_DIRECTORY}/vscode/extensions"
 VSCODE_RESOURCES_SETTINGS="${RESOURCES_DIRECTORY}/vscode/settings/settings.json"
@@ -42,16 +41,16 @@ function link_vscode_settings(){
 }
 
 function install_vscode_extensions(){
-  cat ${VSCODE_RESOURCES_EXTENSIONS} | xargs -L 1 code-insiders --install-extension
+  cat ${VSCODE_RESOURCES_EXTENSIONS} | xargs -L 1 code --install-extension
 }
 
 function backup_vscode_extensions(){
-  code-insiders --list-extensions > $VSCODE_RESOURCES_EXTENSIONS
+  code --list-extensions > $VSCODE_RESOURCES_EXTENSIONS
 }
 
 function setup_vscode(){
   run "install"
-  brew cask install visual-studio-code-insiders
+  brew cask install visual-studio-code
 
   run "creating settings directory"
   create_vscode_dir "${VSCODE_SUPPORT_DIR}"
@@ -67,7 +66,6 @@ function setup_vscode(){
 }
 
 function backup_vscode(){
-
   run "backup vscode extensions"
   backup_vscode_extensions
 }

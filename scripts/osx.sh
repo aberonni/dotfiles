@@ -179,7 +179,7 @@ function set_osx_preferences(){
 	run "disable Local Time Machine Backups"
 	hash tmutil &> /dev/null && sudo tmutil disablelocal
 
-	run "VSCode Insiders as default text editor"
+	run "VSCode as default text editor"
 	defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
-		'{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.microsoft.VSCodeInsiders;LSHandlerPreferredVersions={LSHandlerRoleAll=-;};}'
+		'{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.microsoft.VSCode;LSHandlerPreferredVersions={LSHandlerRoleAll=-;};}'
 }

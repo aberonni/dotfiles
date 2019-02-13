@@ -7,8 +7,6 @@ alias cls='printf "\033c"'
 alias clear='cls'
 alias mvn='mvn-color'
 
-alias code='code-insiders'
-
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
