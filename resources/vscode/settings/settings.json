@@ -4,8 +4,26 @@
     "bracketPairColorizer.showHorizontalScopeLine": false,
     "diffEditor.ignoreTrimWhitespace": true,
     "editor.formatOnPaste": true,
-    "editor.formatOnType": true,
-    "eslint.autoFixOnSave": true,
+    "editor.formatOnSave": false,
+    "eslint.autoFixOnSave": false,
+    "eslint.validate": [
+        {
+            "language": "vue",
+            "autoFix": true
+        },
+        {
+            "language": "html",
+            "autoFix": true
+        },
+        {
+            "language": "javascript",
+            "autoFix": true
+        },
+        {
+            "language": "javascriptreact",
+            "autoFix": true
+        }
+    ],
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "files.insertFinalNewline": true,
@@ -16,12 +34,10 @@
     "search.globalFindClipboard": true,
     "search.exclude": {
         "**/node_modules": true,
-        "**/bower_components": true,
-        "**/.git": true
+        "**/bower_components": true
     },
-    "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.scrollback": 10000,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "workbench.colorTheme": "Dark++",
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#3F9E4D",
@@ -52,8 +68,12 @@
     "workbench.startupEditor": "welcomePage",
     "git.autofetch": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "editor.fontLigatures": true,
     "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
-    "prettier.eslintIntegration": true,
+    "files.associations": {
+        "*.md": "markdown",
+        "*.comp": "mason"
+    },
     "breadcrumbs.enabled": true,
+    "terminal.integrated.rendererType": "dom",
+    "vetur.validation.template": false
 }

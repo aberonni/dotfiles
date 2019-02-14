@@ -18,5 +18,25 @@
     {
         "key": "cmd+ctrl+up",
         "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {
+        "key": "cmd+ctrl+left",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+ctrl+right",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+cmd+right",
+        "command": "workbench.action.focusRightGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+cmd+left",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "editorFocus"
     }
 ]
