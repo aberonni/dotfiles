@@ -75,5 +75,6 @@
     },
     "breadcrumbs.enabled": true,
     "terminal.integrated.rendererType": "dom",
+    "terminal.integrated.shell.osx": "zsh",
     "vetur.validation.template": false
 }
