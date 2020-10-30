@@ -1,9 +1,6 @@
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
-export MAVEN_OPTS="-Xmx2048m"
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 # Add bin path
 if [ -d "$HOME/bin" ] ; then
   PATH="$PATH:$HOME/bin"
