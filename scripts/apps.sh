@@ -21,11 +21,6 @@ function install_brew_cask_packages(){
   done < "${BREW_CASK_PACKAGES}"
 }
 
-function cleanup_brew(){
-  brew cleanup
-  brew cask cleanup
-}
-
 function backup_brew_packages(){
   brew list > "${BREW_PACKAGES}"
 }
@@ -44,9 +39,6 @@ function install_apps(){
 
   run "install brew cask packages"
   install_brew_cask_packages
-
-  run "cleanup brew"
-  cleanup_brew
 
   run "install iterm2 color scheme"
   brew cask install iterm2
