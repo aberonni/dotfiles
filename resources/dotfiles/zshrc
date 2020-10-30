@@ -76,6 +76,10 @@ SPACESHIP_PROMPT_ORDER=(
 	char
 )
 
+
+# load nvm
+\. ~/.nvm/nvm.sh
+
 autoload -Uz compinit
 compinit
 

@@ -117,14 +117,14 @@ function install_system(){
     echo ""
     echo ""
 
+    message "install nvm"
+    install_nvm
+
     message "install brew apps"
     install_apps
     
     message "setup mongodb"
     setup_mongodb
-
-    message "install nvm"
-    install_nvm
 
     message "copy dotfiles"
     setup_dotfiles
