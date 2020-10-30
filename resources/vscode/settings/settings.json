@@ -68,7 +68,7 @@
     "workbench.startupEditor": "welcomePage",
     "git.autofetch": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
     "files.associations": {
         "*.md": "markdown",
         "*.comp": "mason"
