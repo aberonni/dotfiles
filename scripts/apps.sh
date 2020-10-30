@@ -7,6 +7,7 @@ function tap_brew_repositories(){
   brew tap homebrew/cask-versions
 	brew tap homebrew/services
   brew tap mongodb/brew
+  brew tap homebrew/cask-fonts
 }
 
 function install_brew_packages(){
@@ -42,7 +43,7 @@ function install_apps(){
 
   run "install iterm2 color scheme"
   brew cask install iterm2
-  open "${RESOURCES_DIRECTORY}/iterm/one-dark.itermcolors"
+  open "${RESOURCES_DIRECTORY}/iterm/aberonni.itermcolors"
 }
 
 function backup_apps(){
