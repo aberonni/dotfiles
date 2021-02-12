@@ -1,80 +1,87 @@
 {
-    "bracketPairColorizer.highlightActiveScope": true,
-    "bracketPairColorizer.showVerticalScopeLine": false,
-    "bracketPairColorizer.showHorizontalScopeLine": false,
-    "diffEditor.ignoreTrimWhitespace": true,
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": false,
-    "eslint.autoFixOnSave": false,
-    "eslint.validate": [
-        {
-            "language": "vue",
-            "autoFix": true
-        },
-        {
-            "language": "html",
-            "autoFix": true
-        },
-        {
-            "language": "javascript",
-            "autoFix": true
-        },
-        {
-            "language": "javascriptreact",
-            "autoFix": true
-        }
-    ],
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "files.insertFinalNewline": true,
-    "git.confirmSync": false,
-    "git.enableSmartCommit": true,
-    "git.promptToSaveFilesBeforeCommit": true,
-    "prettier.requireConfig": true,
-    "search.globalFindClipboard": true,
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/bower_components": true
+  "bracketPairColorizer.highlightActiveScope": true,
+  "bracketPairColorizer.showVerticalScopeLine": false,
+  "bracketPairColorizer.showHorizontalScopeLine": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": false,
+  "eslint.validate": [
+    {
+      "language": "vue",
+      "autoFix": true
     },
-    "terminal.integrated.scrollback": 10000,
-    "window.zoomLevel": 1,
-    "workbench.colorTheme": "Dark++",
-    "workbench.colorCustomizations": {
-        "activityBarBadge.background": "#3F9E4D",
-        "statusBar.background": "#3F9E4D",
-        "focusBorder": "#3F9E4D",
-        // following color scheme is copied from
-        // https://github.com/nathanbuchar/atom-one-dark-terminal/blob/master/COLORS
-        "terminal.ansiBlack": "#1E2127",
-        "terminal.ansiBrightBlack": "#5C6370",
-        "terminal.ansiRed": "#E06C75",
-        "terminal.ansiBrightRed": "#E06C75",
-        "terminal.ansiGreen": "#98C379",
-        "terminal.ansiBrightGreen": "#98C379",
-        "terminal.ansiYellow": "#D19A66",
-        "terminal.ansiBrightYellow": "#D19A66",
-        "terminal.ansiBlue": "#61AFEF",
-        "terminal.ansiBrightBlue": "#61AFEF",
-        "terminal.ansiMagenta": "#C678DD",
-        "terminal.ansiBrightMagenta": "#C678DD",
-        "terminal.ansiCyan": "#56B6C2",
-        "terminal.ansiBrightCyan": "#56B6C2",
-        "terminal.ansiWhite": "#ABB2BF",
-        "terminal.ansiBrightWhite": "#FFFFFF",
-        "terminal.foreground": "#ABB2BF",
-        "terminal.background": "#1E1E1E"
+    {
+      "language": "html",
+      "autoFix": true
     },
-    "workbench.fontAliasing": "auto",
-    "workbench.startupEditor": "welcomePage",
-    "git.autofetch": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
-    "files.associations": {
-        "*.md": "markdown",
-        "*.comp": "mason"
+    {
+      "language": "javascript",
+      "autoFix": true
     },
-    "breadcrumbs.enabled": true,
-    "terminal.integrated.rendererType": "dom",
-    "terminal.integrated.shell.osx": "zsh",
-    "vetur.validation.template": false
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    }
+  ],
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.insertFinalNewline": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.promptToSaveFilesBeforeCommit": true,
+  "search.globalFindClipboard": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true
+  },
+  "terminal.integrated.scrollback": 10000,
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Dark++",
+  "workbench.colorCustomizations": {
+    "activityBarBadge.background": "#3F9E4D",
+    "statusBar.background": "#3F9E4D",
+    "focusBorder": "#3F9E4D",
+    // following color scheme is copied from
+    // https://github.com/nathanbuchar/atom-one-dark-terminal/blob/master/COLORS
+    "terminal.ansiBlack": "#1E2127",
+    "terminal.ansiBrightBlack": "#5C6370",
+    "terminal.ansiRed": "#E06C75",
+    "terminal.ansiBrightRed": "#E06C75",
+    "terminal.ansiGreen": "#98C379",
+    "terminal.ansiBrightGreen": "#98C379",
+    "terminal.ansiYellow": "#D19A66",
+    "terminal.ansiBrightYellow": "#D19A66",
+    "terminal.ansiBlue": "#61AFEF",
+    "terminal.ansiBrightBlue": "#61AFEF",
+    "terminal.ansiMagenta": "#C678DD",
+    "terminal.ansiBrightMagenta": "#C678DD",
+    "terminal.ansiCyan": "#56B6C2",
+    "terminal.ansiBrightCyan": "#56B6C2",
+    "terminal.ansiWhite": "#ABB2BF",
+    "terminal.ansiBrightWhite": "#FFFFFF",
+    "terminal.foreground": "#ABB2BF",
+    "terminal.background": "#1E1E1E"
+  },
+  "workbench.fontAliasing": "auto",
+  "workbench.startupEditor": "welcomePage",
+  "git.autofetch": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "files.associations": {
+    "*.md": "markdown",
+    "*.comp": "mason"
+  },
+  "breadcrumbs.enabled": true,
+  "terminal.integrated.rendererType": "dom",
+  "terminal.integrated.shell.osx": "zsh",
+  "vetur.validation.template": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "prettier.disableLanguages": [
+    "markdown"
+  ],
+  "prettier.arrowParens": "avoid",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "workbench.editor.decorations.colors": true
 }

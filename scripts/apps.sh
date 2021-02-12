@@ -23,11 +23,11 @@ function install_brew_cask_packages(){
 }
 
 function backup_brew_packages(){
-  brew list > "${BREW_PACKAGES}"
+  brew list --formula > "${BREW_PACKAGES}"
 }
 
 function backup_brew_cask_packages(){
-  brew cask list > "${BREW_CASK_PACKAGES}"
+  brew list --cask > "${BREW_CASK_PACKAGES}"
 }
 
 function install_apps(){

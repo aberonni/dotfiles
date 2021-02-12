@@ -48,7 +48,7 @@ SPACESHIP_PROMPT_ORDER=(
 	host
 	git
 	# hg
-	package
+	# package
 	node
 	# ruby
 	# elixir
@@ -59,9 +59,9 @@ SPACESHIP_PROMPT_ORDER=(
 	# rust
 	# haskell
 	# julia
-	docker
+	# docker
 	# aws
-	venv
+	# venv
 	# conda
 	# pyenv
 	# dotnet

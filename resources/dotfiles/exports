@@ -30,3 +30,5 @@ export EDITOR="/usr/local/bin/code --wait"
 
 export NVM_DIR="$HOME/.nvm"
 export FZF_COMPLETION_TRIGGER='\\'
+
+export PATH="$PATH:/Users/dom/android-platform-tools"
