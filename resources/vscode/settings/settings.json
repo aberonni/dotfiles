@@ -36,7 +36,7 @@
     "**/bower_components": true
   },
   "terminal.integrated.scrollback": 10000,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "workbench.colorTheme": "Dark++",
   "workbench.colorCustomizations": {
     "activityBarBadge.background": "#3F9E4D",
@@ -83,5 +83,6 @@
   ],
   "prettier.arrowParens": "avoid",
   "typescript.updateImportsOnFileMove.enabled": "never",
-  "workbench.editor.decorations.colors": true
+  "workbench.editor.decorations.colors": true,
+  "liveshare.authenticationProvider": "GitHub"
 }
