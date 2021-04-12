@@ -18,7 +18,7 @@ function install_brew_packages(){
 
 function install_brew_cask_packages(){
   while IFS='' read -r line || [[ -n "$line" ]]; do
-    brew cask install "$line"
+    brew install --cask "$line"
   done < "${BREW_CASK_PACKAGES}"
 }
 
@@ -42,7 +42,7 @@ function install_apps(){
   install_brew_cask_packages
 
   run "install iterm2 color scheme"
-  brew cask install iterm2
+  brew install --cask iterm2
   open "${RESOURCES_DIRECTORY}/iterm/aberonni.itermcolors"
 }
 

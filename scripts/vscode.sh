@@ -49,8 +49,8 @@ function backup_vscode_extensions(){
 }
 
 function setup_vscode(){
-  run "install"
-  brew cask install visual-studio-code
+  run "install VSCode"
+  brew install --cask visual-studio-code
 
   run "creating settings directory"
   create_vscode_dir "${VSCODE_SUPPORT_DIR}"
