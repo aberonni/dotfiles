@@ -59,14 +59,14 @@ SPACESHIP_PROMPT_ORDER=(
 	# rust
 	# haskell
 	# julia
-	# docker
+	docker
 	# aws
 	# venv
 	# conda
 	# pyenv
 	# dotnet
 	# ember
-	# kubecontext
+	kubectl
 	exec_time
 	line_sep
 	battery
@@ -90,3 +90,4 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 zstyle ':completion:*' special-dirs true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(kubectl completion zsh)
