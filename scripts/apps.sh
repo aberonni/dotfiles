@@ -40,10 +40,6 @@ function install_apps(){
 
   run "install brew cask packages"
   install_brew_cask_packages
-
-  run "install iterm2 color scheme"
-  brew install --cask iterm2
-  open "${RESOURCES_DIRECTORY}/iterm/aberonni.itermcolors"
 }
 
 function backup_apps(){
