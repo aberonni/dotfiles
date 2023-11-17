@@ -68,7 +68,7 @@ function check_requirements(){
     message "nothing to do, brew already installed"
   fi
 
-   message "check for git installation"
+  message "check for git installation"
   if ! command_exists 'git'; then
     run "installing Git"
     brew install git --without-completions
