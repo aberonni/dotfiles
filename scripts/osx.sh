@@ -2,7 +2,7 @@
 
 function set_osx_preferences(){
 	run "set computer name"
-	sudo scutil --set ComputerName "Domenico Gemoli's Macbook Pro"
+	sudo scutil --set ComputerName "Domenico Gemoli's Macbook"
   	sudo scutil --set HostName "macbook-dgemoli"
   	sudo scutil --set LocalHostName "macbook-dgemoli"
 	sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "macbook-dgemoli"
