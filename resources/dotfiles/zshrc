@@ -78,9 +78,8 @@ SPACESHIP_PROMPT_ORDER=(
 
 
 # load nvm
-# \. ~/.nvm/nvm.sh
-loadnvm
-# nvm use --delete-prefix default --silent
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 autoload -Uz compinit
 compinit
