@@ -78,14 +78,6 @@ function set_osx_preferences(){
 	run "disable shadow in screenshots"
 	defaults write com.apple.screencapture disable-shadow -bool true
 
-	run "enable subpixel font rendering on non-Apple LCDs"
-	defaults write NSGlobalDomain AppleFontSmoothing -int 2
-
-	run "show icons for external hard drives, servers, and removable media on the desktop"
-	defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-	defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
-	defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
-
 	run "show Full Path in Finder Title"
 	defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
@@ -109,9 +101,6 @@ function set_osx_preferences(){
 	run "use column view in all Finder windows by default"
 	defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
-	run "arrange by kind by default"
-	defaults write com.apple.Finder FXPreferredGroupBy Kind
-
 	run "show the ~/Library folder"
 	chflags nohidden ~/Library
 
@@ -119,7 +108,7 @@ function set_osx_preferences(){
 	defaults write com.apple.dock mineffect -string "genie"
 
 	run "minimize windows into their application’s icon"
-	defaults write com.apple.dock minimize-to-application -bool true
+	defaults write com.apple.dock minimize-to-application -bool false
 
 	run "show indicator lights for open applications in the Dock"
 	defaults write com.apple.dock show-process-indicators -bool true
@@ -167,17 +156,11 @@ function set_osx_preferences(){
 	run "prevent Photos from opening automatically when devices are plugged in"
 	defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
-	run "disable automatically adjust brightness"
-	sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Display Enabled" -bool false
-
 	run "prevent Time Machine from Prompting to Use New Hard Drives as Backup Volume"
 	defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 	run "show hidden files"
 	defaults write com.apple.finder AppleShowAllFiles YES
-
-	run "disable Local Time Machine Backups"
-	hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 	run "VSCode as default text editor"
 	defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
