@@ -78,7 +78,9 @@ SPACESHIP_PROMPT_ORDER=(
 
 
 # load nvm
-\. ~/.nvm/nvm.sh
+# \. ~/.nvm/nvm.sh
+loadnvm
+# nvm use --delete-prefix default --silent
 
 autoload -Uz compinit
 compinit
