@@ -85,7 +85,6 @@ rsync
 shared-mime-info
 sl
 sqlite
-squid
 ssh-copy-id
 telnet
 terminal-notifier

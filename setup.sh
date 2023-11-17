@@ -147,9 +147,6 @@ function install_system(){
     message "install fonts"
     install_fonts
 
-    message "Setup squid conf"
-    setup_squid
-
     message "set osx preferences"
     set_osx_preferences
 
@@ -188,9 +185,6 @@ function backup_system(){
     message "backup vscode"
     backup_vscode
 
-    message "backup squid conf"
-    backup_squid
-
     message "backup fonts"
     backup_fonts
 
@@ -214,7 +208,6 @@ source ./scripts/github.sh
 source ./scripts/npm.sh
 source ./scripts/nvm.sh
 source ./scripts/osx.sh
-source ./scripts/squid.sh
 source ./scripts/vscode.sh
 source ./scripts/mongodb.sh
 source ./scripts/xcode.sh
