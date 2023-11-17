@@ -85,7 +85,6 @@ autoload -Uz compinit
 compinit
 
 # Fix some autocomplete options
-eval "$(dircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=31=33'
 zstyle ':completion:*' special-dirs true
