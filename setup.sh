@@ -119,8 +119,8 @@ function install_system(){
     echo ""
     echo ""
 
-    message "install nvm"
-    install_nvm
+    message "install fnm"
+    install_fnm
 
     message "install brew apps"
     install_apps
@@ -208,7 +208,7 @@ source ./scripts/dotfiles.sh
 source ./scripts/fonts.sh
 source ./scripts/github.sh
 source ./scripts/npm.sh
-source ./scripts/nvm.sh
+source ./scripts/fnm.sh
 source ./scripts/osx.sh
 source ./scripts/vscode.sh
 source ./scripts/mongodb.sh
