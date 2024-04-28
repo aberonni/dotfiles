@@ -62,11 +62,11 @@ SPACESHIP_PROMPT_ORDER=(
 	docker
 	# aws
 	# venv
-	conda
+	# conda
 	# pyenv
 	# dotnet
 	# ember
-	kubectl
+	# kubectl
 	exec_time
 	line_sep
 	battery
