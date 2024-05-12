@@ -21,7 +21,7 @@ brew_cask_upgrade() {
 }
 
 pr (){
-	open-pr ${1-master}
+	open-pr ${1-main}
 }
 
 _pr () {
@@ -30,7 +30,7 @@ _pr () {
 	for branch in "${branches[@]}"; do
 		arguments+=(${branch##*/})
 	done
-	arguments+=("master")
+	arguments+=("main")
 	unset branches
 	_values '' $arguments && ret=0
 	unset arguments
@@ -48,13 +48,4 @@ kill-port() { kill -kill "$(lsof -t -i :$1)"; }
 clean-branches() {
 	git remote prune origin
 	git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D
-}
-
-gfix() {
-	BRANCH=${1:-origin/main}
-
-	git add .
-	git commit -m "fixup"
-	git fetch origin
-	git rebase --interactive "$BRANCH"
 }

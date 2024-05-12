@@ -30,6 +30,8 @@ alias update='update_osx; update_brew; update_npm; update_zsh;'
 
 alias backup='bash ~/git/dotfiles/setup.sh -b'
 
+alias gfix='git add -A; git commit -m "fixup"; git fetch origin; git rebase --interactive'
+
 # OS X has no `md5sum`, so use `md5` as a fallback
 command -v md5sum > /dev/null || alias md5sum="md5"
 
