@@ -2,7 +2,7 @@
 
 DOTFILES_DIRECTORY="${HOME}/git/dotfiles"
 RESOURCES_DIRECTORY="${DOTFILES_DIRECTORY}/resources"
-DOTFILES_TARBALL_PATH="https://github.com/aberonni/dotfiles/tarball/master"
+DOTFILES_TARBALL_PATH="https://github.com/aberonni/dotfiles/tarball/main"
 DOTFILES_GIT_REMOTE="https://github.com/aberonni/dotfiles.git"
 DOTFILES_GIT_REMOTE_SSH="git@github.com:aberonni/dotfiles.git"
 
@@ -94,10 +94,10 @@ function check_requirements(){
     run "adding remote repository"
     git init
     git remote add origin ${DOTFILES_GIT_REMOTE}
-    git fetch origin master
+    git fetch origin main
     # Reset the index and working tree to the fetched HEAD
     git reset --hard FETCH_HEAD
-    git branch --set-upstream-to origin/master
+    git branch --set-upstream-to origin/main
     # Remove any untracked files
     git clean -fd
   else
