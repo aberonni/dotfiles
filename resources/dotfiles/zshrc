@@ -1,36 +1,39 @@
-# disable oh my zsh auto updates
-DISABLE_AUTO_UPDATE="true"
+# Config loosely based off of zenful config
+# https://www.youtube.com/watch?v=ud7YxC33Z3w&t=212s
 
-source "${HOME}/.zgen/zgen.zsh"
-
-# if the init scipt doesn't exist
-if ! zgen saved; then
-	printf "$(tput setaf 7)Creating a zgen save...\033[m\n"
-
-	zgen oh-my-zsh
-
-	zgen oh-my-zsh lib/completion.zsh
-	zgen oh-my-zsh lib/git.zsh
-	zgen oh-my-zsh lib/history.zsh
-	# zgen oh-my-zsh lib/spectrum.zsh
-	# zgen oh-my-zsh lib/theme-and-appearance.zsh
-
-	zgen oh-my-zsh plugins/git
-	zgen oh-my-zsh plugins/colored-man-pages
-	zgen oh-my-zsh plugins/npm
-	zgen oh-my-zsh plugins/yarn
-
-	zgen load zsh-users/zsh-completions src
-	zgen load caarlos0/zsh-open-pr
-
-	zgen load denysdovhan/spaceship-prompt spaceship
-
-	# this must be the last loaded
-	zgen load zsh-users/zsh-syntax-highlighting
-
-  	# generate the init script from plugins above
-  	zgen save
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+# Set the directory where zinit and plugins will be installed
+ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/zinit.git"
+
+# Download zinit, if it hasn't been installed yet
+if [ ! -d "$ZINIT_HOME" ]; then
+  mkdir -p "$(dirname "$ZINIT_HOME")"
+  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
+
+# Load zinit
+source "$ZINIT_HOME/zinit.zsh"
+
+# Add in Powerlevel10k
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+
+# Add in zsh plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light Aloxaf/fzf-tab
+
+# Add in snippets (oh-my-zsh plugins)
+zinit snippet OMZP::git
+zinit snippet OMZP::sudo
+zinit snippet OMZP::npm
+zinit snippet OMZP::colored-man-pages
+zinit snippet OMZP::command-not-found
 
 # Load the shell dotfiles, and then some:
 for file in ~/.{aliases,exports,functions}; do
@@ -38,78 +41,54 @@ for file in ~/.{aliases,exports,functions}; do
 done;
 unset file;
 
-# spaceship theme customization
-SPACESHIP_TIME_SHOW=true
+# Load completions
+autoload -U compinit && compinit
 
-SPACESHIP_PROMPT_ORDER=(
-	time
-	user
-	dir
-	host
-	git
-	# hg
-	# package
-	node
-	# ruby
-	# elixir
-	# xcode
-	# swift
-	# golang
-	# php
-	# rust
-	# haskell
-	# julia
-	docker
-	# aws
-	# venv
-	# conda
-	# pyenv
-	# dotnet
-	# ember
-	# kubectl
-	exec_time
-	line_sep
-	battery
-	# vi_mode
-	# jobs
-	exit_code
-	char
-)
+# Use cache for completion (or smth like that)
+zinit cdreplay -q
 
-eval "$(fnm env --use-on-cd)"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-autoload -Uz compinit
-compinit
+# History
+HISTSIZE=50000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_find_no_dups
+
+## History command configuration taken from oh-my-zsh/lib/history.zsh
+setopt extended_history       # record timestamp of command in HISTFILE
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_dups       # ignore duplicated commands history list
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_verify            # show command with history expansion to user before running it
+setopt share_history          # share command history data
 
 # Fix some autocomplete options
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=31=33'
-zstyle ':completion:*' special-dirs true
-zstyle ':completion::complete:git-checkout:argument-rest:remote-branch-refs-noprefix' command "echo"
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' # Enable case insentiive completion for all commands
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # Use colors for completion
+zstyle ':completion:*' menu no # Disable menu selection - we are using fzf for this instead
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
+# make search up and down work, so partially type and hit up/down to find relevant stuff
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
 
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source <(kubectl completion zsh)
 
+### App-specific configuration ###
+
+# Node manager
+eval "$(fnm env --use-on-cd --log-level quiet)"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/dom/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/dom/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/dom/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/dom/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 
 # bun completions
 [ -s "/Users/dom/.bun/_bun" ] && source "/Users/dom/.bun/_bun"

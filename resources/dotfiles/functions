@@ -35,7 +35,6 @@ _pr () {
 	_values '' $arguments && ret=0
 	unset arguments
 }
-compdef _pr pr
 
 gzip_size () {
 	gzip -c $1 | wc -c

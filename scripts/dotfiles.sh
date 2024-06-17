@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONFIG_FILES="aliases exports functions gitconfig gitignore_global nanorc zshrc"
+CONFIG_FILES="aliases exports functions gitconfig gitignore_global nanorc p10k.zsh zshrc"
 CONFIG_FILES_BACKUP_FOLDER="${HOME}/dotfiles_backup"
 CONFIG_FILES_DIR="${RESOURCES_DIRECTORY}/dotfiles"
 
