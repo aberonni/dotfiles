@@ -53,7 +53,7 @@
     context                   # user@host
     dir                       # current directory
     vcs                       # git status
-    command_execution_time    # previous command duration
+    # command_execution_time    # previous command duration
     # =========================[ Line #2 ]=========================
     newline                   # \n
     virtualenv                # python virtual environment
@@ -136,8 +136,8 @@
   typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$cyan
   # Don't show remote branch, current tag or stashes.
   typeset -g POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind)
-  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON=""
-  typeset -g POWERLEVEL9K_VCS_PREFIX='%fon '
+  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON="\ue0a0"
+  typeset -g POWERLEVEL9K_VCS_PREFIX='%F{$grey}on '
   # When in detached HEAD state, show @commit where branch normally goes.
   typeset -g POWERLEVEL9K_VCS_COMMIT_ICON='@'
   # Don't show staged, unstaged, untracked indicators.
@@ -169,7 +169,7 @@
   typeset -g POWERLEVEL9K_NODE_VERSION_FOREGROUND=2
   # Show node version only when in a directory tree containing package.json.
   typeset -g POWERLEVEL9K_NODE_VERSION_PROJECT_ONLY=true
-  typeset -g POWERLEVEL9K_NODE_VERSION_PREFIX="v"
+  typeset -g POWERLEVEL9K_NODE_VERSION_PREFIX="\ue718 "
 
   # Transient prompt works similarly to the builtin transient_rprompt option. It trims down prompt
   # when accepting a command line. Supported values:

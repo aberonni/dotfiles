@@ -12,22 +12,10 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-alias ag='ag -f --hidden'
-
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
 alias flush_dns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;'
-
-alias update_osx='printf "check apple update\n"; sudo softwareupdate --verbose -i -a;'
-
-alias update_brew='printf "update brew\n"; brew update -v; brew upgrade; brew_cask_upgrade; brew cleanup; brew cask cleanup; brew doctor; brew prune;'
-
-alias update_npm='printf "update npm\n"; npm install npm -g; npm update -g;'
-
-alias update_zsh='printf "update zgen\n"; zgen selfupdate; printf "update zgen plugins\n"; zgen update; source ~/.zshrc;'
-
-alias update='update_osx; update_brew; update_npm; update_zsh;'
 
 alias backup='bash ~/git/dotfiles/setup.sh -b'
 

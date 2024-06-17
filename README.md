@@ -1,7 +1,5 @@
 # [aberonni](https://github.com/aberonni)’s dotfiles
 
-These are the dotfiles that I use, started as a fork of [canemacchina](https://github.com/canemacchina)'s dotfiles and mixed with a bit of [Mulder90](https://github.com/mulder90)'s dotfiles.
-
 ## Setup
 
 To set up the `dotfiles` just run the appropriate snippet in the terminal:

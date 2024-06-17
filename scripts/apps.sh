@@ -31,7 +31,6 @@ function backup_brew_cask_packages(){
 }
 
 function install_apps(){
-
   run "tap repositories"
   tap_brew_repositories
 
