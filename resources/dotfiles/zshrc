@@ -76,9 +76,13 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # Use colors for complet
 zstyle ':completion:*' menu no # Disable menu selection - we are using fzf for this instead
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
-# make search up and down work, so partially type and hit up/down to find relevant stuff
-bindkey '^[[A' history-search-backward
-bindkey '^[[B' history-search-forward
+# Allows for partial history search with up and down arrow keys
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
