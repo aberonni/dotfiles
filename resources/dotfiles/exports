@@ -15,3 +15,6 @@ export EDITOR="/usr/local/bin/code --wait"
 export FZF_COMPLETION_TRIGGER='\\'
 
 export PATH="$PATH:/Users/dom/android-platform-tools"
+
+# Enable mouse scroll when using less
+export LESS='--mouse --wheel-lines=3'
