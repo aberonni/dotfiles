@@ -75,3 +75,19 @@ clean-branches() {
 	git remote prune origin
 	git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D
 }
+
+restart-121-service() (
+	cd ~/git/121-platform/services
+	docker-compose -f docker-compose.yml -f docker-compose.development.yml down
+	npm run start:services
+	timeout 180s sh -c 'until docker ps | grep 121-service | grep -q \(healthy\); do echo "Waiting for 121-service to be healthy..."; sleep 1; done'
+	curl -d '{"secret":"fill_in_secret"}' -H "Content-Type: application/json" -X POST 'http://localhost:3000/api/scripts/reset?script=nlrc-multiple-mock-data'
+	docker logs -f 121-service
+)
+
+fix-i18n-conflict () {
+	cd ~/git/121-platform/interfaces/Portalicious
+	git checkout $(git rev-parse HEAD) src/locale
+	npm run extract-i18n
+	git add src/locale
+}
