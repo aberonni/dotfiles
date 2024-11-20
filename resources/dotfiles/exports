@@ -10,7 +10,7 @@ export TERM="xterm-256color"
 
 export HISTORY_IGNORE="(history|ls|l|la|ll|lla|lsa|cd|cd *|pwd|exit|* --help|man *|cls|clear)"
 
-export EDITOR="/usr/local/bin/code --wait"
+export EDITOR="code --wait"
 
 export FZF_COMPLETION_TRIGGER='\\'
 
