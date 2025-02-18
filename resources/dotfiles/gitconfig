@@ -20,6 +20,6 @@
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
 [sequence]
-	editor = rebase-editor -c ^R,^y,^w
+	editor = code --wait
 [pull]
 	ff = only
