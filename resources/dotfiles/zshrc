@@ -96,6 +96,6 @@ eval "$(fnm env --use-on-cd --log-level quiet)"
 source <(ng completion script)
 
 # bun
-[ -s "/Users/dom/.bun/_bun" ] && source "/Users/dom/.bun/_bun"
+[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
