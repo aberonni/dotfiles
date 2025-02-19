@@ -1,7 +1,4 @@
 {
-  "bracketPairColorizer.highlightActiveScope": true,
-  "bracketPairColorizer.showVerticalScopeLine": false,
-  "bracketPairColorizer.showHorizontalScopeLine": false,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "explorer.confirmDelete": false,
@@ -49,14 +46,15 @@
   "editor.fontFamily": "MesloLGS NF, Comic Sans MS, Menlo, Monaco, 'Courier New', monospace",
   "files.associations": {
     "*.md": "markdown",
-    "*.comp": "mason"
+    "*.comp": "mason",
+    ".env*": "dotenv"
   },
   "breadcrumbs.enabled": true,
   "editor.tabSize": 2,
   "prettier.arrowParens": "avoid",
-  "typescript.updateImportsOnFileMove.enabled": "never",
+  "typescript.updateImportsOnFileMove.enabled": "prompt",
   "workbench.editor.decorations.colors": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "eslint.format.enable": true,
   "workbench.layoutControl.enabled": false,
   "window.commandCenter": false,
@@ -66,7 +64,8 @@
   "diffEditor.experimental.showMoves": true,
   "diffEditor.useInlineViewWhenSpaceIsLimited": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
+    "source.removeUnusedImports": "explicit"
   },
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "prettier.requireConfig": true,
@@ -76,10 +75,53 @@
   "workbench.colorTheme": "Default Dark+",
   "workbench.activityBar.location": "top",
   "prettier.prettierPath": "./node_modules/prettier",
-  "gitlens.mode.active": "review",
-  "prisma.showPrismaDataPlatformNotification": false,
   "eslint.ignoreUntitled": true,
-  "eslint.experimental.useFlatConfig": true,
+  "eslint.useFlatConfig": true,
   "github.copilot.editor.enableAutoCompletions": true,
-  "liveshare.launcherClient": "visualStudioCode"
+  "liveshare.launcherClient": "visualStudioCode",
+  "liveshare.populateGitCoAuthors": "never",
+  "diffEditor.ignoreTrimWhitespace": true,
+  "merge-conflict.autoNavigateNextConflict.enabled": true,
+  "window.openFoldersInNewWindow": "on",
+  "extensions.ignoreRecommendations": true,
+  "git.blame.statusBarItem.enabled": true,
+  "orta.vscode-twoslash-queries.maxLength": 600,
+  "editor.tokenColorCustomizations": {
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
+          }
+        }
+      ]
+    },
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#fff"
+          }
+        }
+      ]
+    },
+    "textMateRules": [
+      {
+        "name": "envKeys",
+        "scope": "string.quoted.single.ini,constant.numeric.ini,string.quoted.double.ini",
+        "settings": {
+          "foreground": "#19354900"
+        }
+      },
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  },
+  "dotenv.enableAutocloaking": true
 }

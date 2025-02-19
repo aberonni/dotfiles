@@ -1,5 +1,9 @@
 @angular/cli
 corepack
+gdeploy
 http-server
 npm
-rebase-editor
+npm-check-updates
+twilio-cli
+typeorm
+yarn

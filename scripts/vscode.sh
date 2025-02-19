@@ -68,4 +68,8 @@ function setup_vscode(){
 function backup_vscode(){
   run "backup vscode extensions"
   backup_vscode_extensions
+  
+  run "backup vscode settings"
+  cp "${VSCODE_SUPPORT_SETTINGS}" ${VSCODE_RESOURCES_SETTINGS}
+  cp "${VSCODE_SUPPORT_KEYBINDINGS}" ${VSCODE_RESOURCES_KEYBINDINGS}
 }

@@ -20,7 +20,6 @@ giflib
 gmp
 handbrake
 highway
-icu4c
 icu4c@76
 imath
 jpeg-turbo
@@ -31,14 +30,15 @@ keystone
 krb5
 libcbor
 libdeflate
-libevent
 libfido2
+libnghttp2
 libpng
 libpq
 libsodium
 libtiff
 libtool
 libusb
+libuv
 libvmaf
 libyaml
 little-cms2
@@ -49,6 +49,7 @@ mpdecimal
 mysql
 mysql-client
 ncurses
+node@18
 oniguruma
 openexr
 openssl@3
@@ -56,7 +57,6 @@ pandoc
 pcre
 pcre2
 pgloader
-pkg-config
 pkgconf
 pnpm
 postgresql@14
@@ -75,6 +75,7 @@ sqlite
 supabase
 tig
 trash
+twilio
 unixodbc
 virtualenv
 webp
