@@ -71,7 +71,6 @@
   "prettier.requireConfig": true,
   "editor.formatOnType": true,
   "redhat.telemetry.enabled": false,
-  "playwright.reuseBrowser": false,
   "workbench.colorTheme": "Default Dark+",
   "workbench.activityBar.location": "top",
   "prettier.prettierPath": "./node_modules/prettier",
@@ -123,5 +122,18 @@
       }
     ]
   },
-  "dotenv.enableAutocloaking": true
+  "dotenv.enableAutocloaking": true,
+  "workbench.settings.applyToAllProfiles": [
+    "testing.defaultGutterClickAction"
+  ],
+  "playwright.runGlobalSetupOnEachRun": false,
+  "playwright.reuseBrowser": true,
+  "intelliphp.inlineSuggestionsEnabled": false,
+  "php.codeActions.enabled": false,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "[markdown]": {
+    "diffEditor.ignoreTrimWhitespace": false
+  }
 }
