@@ -91,3 +91,59 @@ fix-i18n-conflict () {
 	npm run extract-i18n
 	git add src/locale
 }
+
+review-tasks () {
+	## Pre-requisites
+	# 1. Install Azure CLI: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
+	# 2. Install jq: https://stedolan.github.io/jq/download/
+	# 3. Install fzf: https://github.com/junegunn/fzf
+	# 4. Login to Azure DevOps:
+	#    az login
+	# 5. Install Azure DevOps extension:
+	#    az extension add --name azure-devops
+	# 6. Set the default organization and project:
+	#    az devops configure --defaults organization=https://dev.azure.com/redcrossnl project="121 Platform"
+
+	ORG="https://dev.azure.com/redcrossnl"
+	PROJECT="121 Platform"
+	TEAM="121 Development Team"
+
+	# Get current iteration path
+	ITER=$(az boards iteration team list \
+		--organization "$ORG" \
+		--project "$PROJECT" \
+		--team "$TEAM" \
+		| jq -r '.[] | select(.attributes.timeFrame == "current") | .path')
+
+	if [ -z "$ITER" ]; then
+		echo "❌ Could not resolve current iteration."
+		return 1
+	fi
+
+	# Run the WIQL query
+	WORKITEMS=$(az boards query --wiql "
+		SELECT [System.Id], [System.Title], [System.State], [System.AssignedTo]
+		FROM workitems
+		WHERE
+			[System.TeamProject] = '$PROJECT' AND
+			[System.State] = 'Review' AND
+			([System.AssignedTo] = @Me OR [System.AssignedTo] = '') AND
+			[System.IterationPath] = '$ITER'
+	" --organization "$ORG" --output json)
+
+	# Return if no work items are found
+	if [[ "$(echo "$WORKITEMS" | jq 'length')" -eq 0 ]]; then
+		echo "✅ No work items found."
+		return 0
+	fi
+
+	# Otherwise, pipe to fzf
+	echo "$WORKITEMS" \
+	| jq -r '.[] | [.fields."System.Id", .fields."System.Title", .fields."System.AssignedTo".displayName // "Unassigned"] | @tsv' \
+	| column -t -s $'\t' \
+	| fzf \
+		--preview "echo {} | cut -d' ' -f1 | xargs -I % az boards work-item show --id % -f System.Description --expand none | jq '.fields'" \
+		--preview-window=up:30%:wrap \
+		--prompt="Select item to review: " \
+		--bind="enter:execute-silent(open 'https://dev.azure.com/redcrossnl/121%20Platform/_workitems/edit/{1}')"
+}
