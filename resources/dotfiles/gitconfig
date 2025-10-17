@@ -1,16 +1,16 @@
 [help]
   # Do not automatically correct and execute mistyped commands
-	autocorrect = 0
+    autocorrect = 0
 [merge]
   # Include summaries of merged commits in newly created merge commit messages
-	log = true
+    log = true
 [core]
-	editor = code --wait
-	excludesfile = ~/.gitignore_global
-	pager = diff-so-fancy | less --tabs=4 -RF
+    editor = code --wait
+    excludesfile = ~/.gitignore_global
+    pager = diff-so-fancy | less --tabs=4 -RF
 [user]
-	email = domenicogemoli@gmail.com
-	name = Domenico Gemoli
+    email = domenicogemoli@gmail.com
+    name = Domenico Gemoli
 [merge]
     tool = vscode
 [mergetool "vscode"]
@@ -20,6 +20,8 @@
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
 [sequence]
-	editor = code --wait
+    editor = code --wait
 [pull]
-	ff = only
+    ff = only
+[init]
+	defaultBranch = main

@@ -198,6 +198,11 @@
   # really need it.
   typeset -g POWERLEVEL9K_DISABLE_HOT_RELOAD=true
 
+
+  # This is an attempt to fix copilot issues with zsh prompt.
+  # https://github.com/romkatv/powerlevel10k/issues/2513#issuecomment-1864051324
+  typeset -g POWERLEVEL9K_TERM_SHELL_INTEGRATION=true
+
   # If p10k is already loaded, reload configuration.
   # This works even with POWERLEVEL9K_DISABLE_HOT_RELOAD=true.
   (( ! $+functions[p10k] )) || p10k reload
