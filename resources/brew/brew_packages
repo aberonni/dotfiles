@@ -8,9 +8,13 @@ azure-cli
 brotli
 c-ares
 ca-certificates
+coreutils
 fnm
 fzf
+gettext
+gh
 giflib
+gmp
 highway
 icu4c@76
 icu4c@77
@@ -24,6 +28,7 @@ libnghttp2
 libpng
 libsodium
 libtiff
+libunistring
 libuv
 libvmaf
 libyaml
@@ -42,8 +47,10 @@ readline
 shellcheck
 sqlite
 terraform
+tree
 twilio
 webp
 xz
+zoxide
 zsh
 zstd

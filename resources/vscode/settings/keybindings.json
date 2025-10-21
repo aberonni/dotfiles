@@ -38,5 +38,10 @@
         "key": "ctrl+cmd+left",
         "command": "workbench.action.focusLeftGroup",
         "when": "editorFocus"
+    },
+    {
+        "key": "cmd+g",
+        "command": "editor.action.nextSelectionMatchFindAction",
+        "when": "editorFocus"
     }
 ]

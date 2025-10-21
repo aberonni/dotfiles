@@ -105,7 +105,7 @@ function check_requirements(){
   fi
 
   run "updating from remote"
-  git pull --rebase origin master
+  git pull --rebase origin main
 }
 
 
