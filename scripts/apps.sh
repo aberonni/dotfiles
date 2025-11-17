@@ -4,10 +4,7 @@ BREW_PACKAGES="${RESOURCES_DIRECTORY}/brew/brew_packages"
 BREW_CASK_PACKAGES="${RESOURCES_DIRECTORY}/brew/brew_cask_packages"
 
 function tap_brew_repositories(){
-  brew tap homebrew/cask-versions
-	brew tap homebrew/services
   brew tap mongodb/brew
-  brew tap homebrew/cask-fonts
 }
 
 function install_brew_packages(){
