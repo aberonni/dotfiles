@@ -19,7 +19,7 @@ alias flush_dns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;'
 
 alias backup='bash ~/git/dotfiles/setup.sh -b'
 
-alias gfix='git add -A; git commit -m "fixup"; git fetch origin; git rebase --interactive'
+alias gfix='git add -A; git commit -m "fixup" --no-verify; git fetch origin; git rebase --interactive'
 
 # OS X has no `md5sum`, so use `md5` as a fallback
 command -v md5sum > /dev/null || alias md5sum="md5"

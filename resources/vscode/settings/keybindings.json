@@ -43,5 +43,13 @@
         "key": "cmd+g",
         "command": "editor.action.nextSelectionMatchFindAction",
         "when": "editorFocus"
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b\r"
+        },
+        "when": "terminalFocus"
     }
 ]

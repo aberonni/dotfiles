@@ -137,7 +137,7 @@
   # Don't show remote branch, current tag or stashes.
   typeset -g POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind)
   typeset -g POWERLEVEL9K_VCS_BRANCH_ICON="\ue0a0"
-  typeset -g POWERLEVEL9K_VCS_PREFIX='%F{$grey}on '
+  typeset -g POWERLEVEL9K_VCS_PREFIX=''
   # When in detached HEAD state, show @commit where branch normally goes.
   typeset -g POWERLEVEL9K_VCS_COMMIT_ICON='@'
   # Don't show staged, unstaged, untracked indicators.
