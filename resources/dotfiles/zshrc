@@ -42,9 +42,6 @@ for file in ~/.{aliases,exports,functions}; do
 done;
 unset file;
 
-# Load completions
-autoload -U compinit && compinit
-
 # Use cache for completion
 zinit cdreplay -q
 
@@ -92,9 +89,6 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # Node manager
 eval "$(fnm env --use-on-cd --log-level quiet)"
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
 # bun
 [ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
@@ -102,3 +96,14 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # VSCode shell integration - https://www.atpeaz.com/vscode-terminal-hanging/
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# The following line has been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/dom/.docker/completions $fpath)
+
+# Load completions
+autoload -Uz compinit
+compinit
