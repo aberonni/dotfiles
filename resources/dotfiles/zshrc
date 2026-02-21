@@ -36,6 +36,10 @@ zinit snippet OMZP::npm
 zinit snippet OMZP::colored-man-pages
 zinit snippet OMZP::command-not-found
 
+# Load completions
+autoload -Uz compinit
+compinit
+
 # Load the shell dotfiles, and then some:
 for file in ~/.{aliases,exports,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
@@ -81,10 +85,11 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ### App-specific configuration ###
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Node manager
 eval "$(fnm env --use-on-cd --log-level quiet)"
@@ -96,14 +101,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # VSCode shell integration - https://www.atpeaz.com/vscode-terminal-hanging/
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
-
-# jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
-# The following line has been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/dom/.docker/completions $fpath)
-
-# Load completions
-autoload -Uz compinit
-compinit
