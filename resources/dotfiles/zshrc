@@ -104,3 +104,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # VSCode shell integration - https://www.atpeaz.com/vscode-terminal-hanging/
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
+# zoxide
+eval "$(zoxide init zsh)"
